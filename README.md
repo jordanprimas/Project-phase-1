@@ -14,13 +14,13 @@ Habit tracker is an application where habits can be submitted and then deleted o
 
 ## Contribution 
 Pull requests are welcome
-    * Fork the respository. 
-    * Make the desired change on your fork.
-    * Commit and push. 
-    * Open a pull request. 
+* Fork the respository. 
+* Make the desired change on your fork.
+* Commit and push. 
+* Open a pull request. 
 
 Please ensure your request adheres to the following guidelines:
-    * Create an individual pull request for each suggestion.
-    * Always add a README to your added code. 
+* Create an individual pull request for each suggestion.
+* Always add a README to your added code. 
 
 Thank you for your suggestions!
