@@ -12,7 +12,7 @@ Habit tracker is an application where habits can be submitted and then deleted o
 * Run json server for db.json. 
 * Open index.html in the browser.
 
-## Contribution 
+## Contributing 
 Pull requests are welcome
 * Fork the respository. 
 * Make the desired change on your fork.
