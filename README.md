@@ -5,7 +5,7 @@ Habbit tracker is an application where habbits can be submitted then deleted onc
 * Have json-server installed 
 
 ## Repo URL 
-[Link text](https://github.com/learn-co-curriculum/phase-1-javascript-project-mode 'Repository link')
+[Repository link](https://github.com/jordanprimas/Project-phase-1)
 
 ## Installation
 * Fork and clone application into your local environment  
