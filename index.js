@@ -26,6 +26,12 @@ function renderOneHabit (habit) {
         <h4>${habit.name}</h4>
         <p>${habit.description}</p>
     </div> 
-    <img class="habit-img" src="${habit.imageURL}>
+    <img class="habit-img" src="${habit.imageURL}>   
     `
+    console.log(card)
+}
+
+//Get Data 
+function getHabitData(){
+    habitData.forEach(habit => renderOneHabit(habit)) 
 }
