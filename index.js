@@ -1,6 +1,21 @@
+const form = document.getElementById("create-habit-form")
 
 
+// 
+document.addEventListener('DOMContentLoaded', () => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const newHabitObject = {
+            name: e.target.new_habit_name.value,
+            description: e.target.new_habit_description.value,
+            image: e.target.new_habit_image.value
+        }
+        console.log(newHabitObject)
 
+
+    })
+
+})
 
 
 
