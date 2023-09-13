@@ -16,8 +16,6 @@
 
 
 
-
-
 //Build Card and render to DOM
 function renderOneHabit (habit) {
     let card = document.createElement('p')
@@ -32,6 +30,11 @@ function renderOneHabit (habit) {
 }
 
 //Get Data 
-function getHabitData(){
-    habitData.forEach(habit => renderOneHabit(habit)) 
+function getAllHabbits(){
+    fetch(" http://localhost:3000/habitData")
+    .then(res => res.json())
+    .then(habitdata => habitdata.forEach(habit => renderOneHabit(habit)))
+
 }
+
+getAllHabbits()
