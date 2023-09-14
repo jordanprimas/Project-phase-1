@@ -37,6 +37,10 @@ function buildHabit(habit) {
    habitImage.src = habit.image
    removeBtn.innerText = "Completed"
 
+   removeBtn.addEventListener('click', (e) => {
+    e.target.parentNode.remove()
+   })
+
    habitCard.append(habitName, habitDescription, habitImage, removeBtn)
    appendHabitCard.append(habitCard)
 }
