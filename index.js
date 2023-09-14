@@ -2,6 +2,7 @@ const form = document.getElementById("create-habit-form")
 const appendHabitCard = document.getElementById("my-habit-card")
 
 
+
 // Grab values from form inputs 
 document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
@@ -15,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset() 
     })
 })
+
+
 
 //Build new habit card and delete button and append to DOM
 function buildHabit(habit) {
@@ -40,17 +43,6 @@ function buildHabit(habit) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 //Build Card and render to DOM
 function renderOneHabit(habit) {
     let card = document.createElement('p')
@@ -59,10 +51,12 @@ function renderOneHabit(habit) {
         <h4>${habit.name}</h4>
         <p>${habit.description}</p>
     </div> 
-    <img class="habit-img" src="${habit.imageURL}>   
+    <img class="habit-img" src="${habit.imageURL}"/>   
     `
    document.getElementById("habit-idea-card").appendChild(card)
 }
+
+
 
 //Get Data 
 function getAllHabits(){
