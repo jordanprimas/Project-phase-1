@@ -27,10 +27,10 @@ function buildHabit(habit) {
    let habitImage = document.createElement("img")
    let removeBtn = document.createElement("button")
 
-   habitName.className = "habbit_name"
-   habitDescription.className = "habbit_description"
-   habitImage.className = "new_img"
-   removeBtn.className = "remove_button"
+   habitName.className = "habit-name"
+   habitDescription.className = "habit-description"
+   habitImage.className = "new-img"
+   removeBtn.className = "remove-button"
 
    habitName.innerText = habit.name
    habitDescription.innerText = habit.description
