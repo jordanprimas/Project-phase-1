@@ -1,4 +1,5 @@
 const form = document.getElementById("create-habit-form")
+const appendHabitCard = document.getElementById("my-habit-card")
 
 
 // Grab values from form inputs 
@@ -21,7 +22,7 @@ function buildHabit(habit) {
    let habitName = document.createElement("h4")
    let habitDescription = document.createElement("p")
    let habitImage = document.createElement("img")
-   let removeBtn = document.createElement("btn")
+   let removeBtn = document.createElement("button")
 
    habitName.className = "habbit_name"
    habitDescription.className = "habbit_description"
@@ -31,11 +32,10 @@ function buildHabit(habit) {
    habitName.innerText = habit.name
    habitDescription.innerText = habit.description
    habitImage.src = habit.image
-   removeBtn.innerText = "completed"
+   removeBtn.innerText = "Completed"
 
    habitCard.append(habitName, habitDescription, habitImage, removeBtn)
-
-
+   appendHabitCard.append(habitCard)
 }
 
 
