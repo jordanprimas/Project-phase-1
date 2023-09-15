@@ -33,6 +33,8 @@ function buildHabit(habit) {
    habitDescription.className = "habit-description"
    habitImage.className = "new-img"
    removeBtn.className = "remove-button"
+   incrementBtn.className = "increment-button"
+   decrementBtn.className = "decrement-button"
    totalCount.className = "total-count"
    
 
@@ -71,6 +73,7 @@ const handleDecrement = () => {
    habitCard.append(habitName, habitDescription, habitImage, removeBtn, incrementBtn, decrementBtn, totalCount)
    appendHabitCard.append(habitCard)
 }
+
 
 
 
