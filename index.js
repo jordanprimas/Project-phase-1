@@ -2,7 +2,6 @@ const form = document.getElementById("create-habit-form")
 const appendHabitCard = document.getElementById("my-habit-card")
 
 
-
 // Grab values from form inputs 
 document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
@@ -26,22 +25,44 @@ function buildHabit(habit) {
    let habitDescription = document.createElement("p")
    let habitImage = document.createElement("img")
    let removeBtn = document.createElement("button")
+   let incrementBtn = document.createElement("button")
+   let decrementBtn = document.createElement("button")
+   let totalCount = document.createElement("div")
 
    habitName.className = "habit-name"
    habitDescription.className = "habit-description"
    habitImage.className = "new-img"
    removeBtn.className = "remove-button"
+   totalCount.className = "total-count"
+   
 
    habitName.innerText = habit.name
    habitDescription.innerText = habit.description
    habitImage.src = habit.image
-   removeBtn.innerText = "Completed"
+   removeBtn.innerText = "Delete"
+   incrementBtn.innerText = "+"
+   decrementBtn.innerText = "-"
 
+// Increment count 
+   var count = 0
+   totalCount.innerHTML = count
+   const handleIncrement = () => {
+    count++
+    console.log(handleIncrement)
+    totalCount.innerHTML = count
+   }
+
+
+// Decrement count 
+
+  
+   incrementBtn.addEventListener("click", handleIncrement)
+   
    removeBtn.addEventListener('click', (e) => {
     e.target.parentNode.remove()
    })
 
-   habitCard.append(habitName, habitDescription, habitImage, removeBtn)
+   habitCard.append(habitName, habitDescription, habitImage, removeBtn, incrementBtn, decrementBtn, totalCount)
    appendHabitCard.append(habitCard)
 }
 
@@ -50,6 +71,7 @@ function buildHabit(habit) {
 //Build Card and render to DOM
 function renderOneHabit(habit) {
     let card = document.createElement('p')
+    card.className = "habit-suggestion-card"
     card.innerHTML = `
     <div class="habit-content">
         <h4>${habit.name}</h4>
@@ -71,3 +93,6 @@ function getAllHabits(){
 }
 
 getAllHabits()
+
+
+
