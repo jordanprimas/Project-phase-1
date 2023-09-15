@@ -44,19 +44,21 @@ function buildHabit(habit) {
    decrementBtn.innerText = "-"
 
 // Increment count 
-   var count = 0
-   totalCount.innerHTML = count
-   const handleIncrement = () => {
-    count++
-    console.log(handleIncrement)
-    totalCount.innerHTML = count
-   }
+var count = 0
+totalCount.innerHTML = count
+const handleIncrement = () => {
+ count++
+ console.log(handleIncrement)
+ totalCount.innerHTML = count
+}
 
 
 // Decrement count 
 
   
-   incrementBtn.addEventListener("click", handleIncrement)
+   
+// Add event listener to increment and decrement btns
+    incrementBtn.addEventListener("click", handleIncrement)
    
    removeBtn.addEventListener('click', (e) => {
     e.target.parentNode.remove()
