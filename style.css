@@ -74,3 +74,19 @@ body{
     position: relative;
     left: 800px;
   }
+
+  .increment-button{
+    position: relative;
+    left: 600px;
+  }
+
+  .decrement-button{
+    position: relative;
+    left: 600px;
+  }
+
+  .total-count{
+    position: relative;
+    left: 730px;
+    top: 20px;
+    }

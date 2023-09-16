@@ -27,7 +27,7 @@ function buildHabit(habit) {
    let removeBtn = document.createElement("button")
    let incrementBtn = document.createElement("button")
    let decrementBtn = document.createElement("button")
-   let totalCount = document.createElement("div")
+   let totalCount = document.createElement("p")
 
    habitName.className = "habit-name"
    habitDescription.className = "habit-description"
@@ -70,7 +70,7 @@ const handleDecrement = () => {
     e.target.parentNode.remove()
    })
 
-   habitCard.append(habitName, habitDescription, habitImage, removeBtn, incrementBtn, decrementBtn, totalCount)
+   habitCard.append(habitName, habitDescription, habitImage, removeBtn, decrementBtn, incrementBtn, totalCount)
    appendHabitCard.append(habitCard)
 }
 
