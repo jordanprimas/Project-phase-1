@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//Build new habit card and delete button and append to DOM
+//Build new habit card with buttons and append to DOM
 function buildHabit(habit) {
    let habitCard = document.createElement("div")
    let habitName = document.createElement("h4")
@@ -46,7 +46,7 @@ function buildHabit(habit) {
    decrementBtn.innerText = "-"
 
 // Initialize count to 0  
-var count = 0
+let count = 0
 totalCount.innerHTML = count
 
 // Increment counter  
@@ -57,16 +57,14 @@ const handleIncrement = () => {
 
 // Decrement counter
 const handleDecrement = () => {
-    count --
+    count--
     totalCount.innerHTML = count
 }
    
-// Add event listener to increment and decrement btns
+// Add events to buttons
     incrementBtn.addEventListener("click", handleIncrement)
     decrementBtn.addEventListener("click", handleDecrement)
-   
-
-   removeBtn.addEventListener('click', (e) => {
+    removeBtn.addEventListener('click', (e) => {
     e.target.parentNode.remove()
    })
 
@@ -76,10 +74,9 @@ const handleDecrement = () => {
 
 
 
-
 //Build Card and render to DOM
 function renderOneHabit(habit) {
-    let card = document.createElement('p')
+    let card = document.createElement('div')
     card.className = "habit-suggestion-card"
     card.innerHTML = `
     <div class="habit-content">
@@ -98,7 +95,6 @@ function getAllHabits(){
     fetch(" http://localhost:3000/habitData")
     .then(res => res.json())
     .then(habitdata => habitdata.forEach(habit => renderOneHabit(habit)))
-
 }
 
 getAllHabits()
