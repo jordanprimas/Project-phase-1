@@ -44,32 +44,32 @@ function buildHabit(habit) {
    removeBtn.innerText = "Delete"
    incrementBtn.innerText = "+"
    decrementBtn.innerText = "-"
-
-// Initialize count to 0  
-let count = 0
-totalCount.innerHTML = count
-
-// Increment counter  
-const handleIncrement = () => {
- count++
- totalCount.innerHTML = count
-}
-
-// Decrement counter
-const handleDecrement = () => {
-    count--
-    totalCount.innerHTML = count
-}
    
-// Add events to buttons
+   // Initialize count to 0  
+   let count = 0
+   totalCount.innerHTML = count
+   
+   // Increment counter  
+   const handleIncrement = () => {
+        count++
+        totalCount.innerHTML = count
+    }
+
+    // Decrement counter
+    const handleDecrement = () => {
+        count--
+        totalCount.innerHTML = count
+    }
+   
+    // Add events to buttons
     incrementBtn.addEventListener("click", handleIncrement)
     decrementBtn.addEventListener("click", handleDecrement)
     removeBtn.addEventListener('click', (e) => {
     e.target.parentNode.remove()
-   })
+    })
 
-   habitCard.append(habitName, habitDescription, habitImage, removeBtn, decrementBtn, incrementBtn, totalCount)
-   appendHabitCard.append(habitCard)
+    habitCard.append(habitName, habitDescription, habitImage, removeBtn, decrementBtn, incrementBtn, totalCount)
+    appendHabitCard.append(habitCard)
 }
 
 

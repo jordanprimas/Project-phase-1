@@ -2,7 +2,7 @@
 Habit tracker is an application where you can create a habit that you would like to track and add it to your list of habits. You may indicate how many times you have completed the habit using the tracker. A list of suggested habits is also available via the mock rest API.  
 
 ## Requirements
-* Have json-server installed 
+* Have json-server installed. 
 
 ## Repo URL 
 [Repository link](https://github.com/jordanprimas/Project-phase-1)
